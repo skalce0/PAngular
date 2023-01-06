@@ -23,7 +23,7 @@ export class ConfigService {
   private get httpHeaders(): HttpHeaders {
     return new HttpHeaders( {
       'Content-Type': this.APPLICATION_JSON,
-      'Accept': this.APPLICATION_JSON,
+      Accept: this.APPLICATION_JSON,
       'Access-Control-Allow-Origin' :  'origin-list'
     });
   }
