@@ -40,7 +40,7 @@ export class DataService {
   constructor(private readonly http: HttpClient) {}
 
 
-  getSuggestions(term: string): Observable<string[]> {
+  getSuggestions(term: string): string[] {
     // retrieve suggestions from a data source, such as an API or a local data array
     const apiKey = '72W5BK5R5QKEZ9VS';
     const url = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${term}&apikey=${apiKey}`;
@@ -49,7 +49,7 @@ export class DataService {
         map(response => response.bestMatches.map(match => match.symbol))
       );
     console.log(test);
-    return test;
+    return [];
 
   }
  /* httpGet(url: string): Observable<any> {

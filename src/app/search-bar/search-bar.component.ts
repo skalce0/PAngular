@@ -11,7 +11,7 @@ import {empty, Observable} from 'rxjs';
 })
 export class SearchBarComponent {
   searchTerm: string;
-  suggestions: Observable<string[]>;
+  suggestions: string[];
 
   constructor(private dataService: DataService) {}
 
@@ -21,6 +21,6 @@ export class SearchBarComponent {
 
   selectSuggestion(suggestion: string) {
     this.searchTerm = suggestion;
-    this.suggestions = empty();
+    this.suggestions = [];
   }
 }
