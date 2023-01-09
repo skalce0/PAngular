@@ -17,12 +17,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {ConfigService} from './config/service';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import {RouterModule} from '@angular/router';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    MainNavbarComponent
+    MainNavbarComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
