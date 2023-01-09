@@ -1,0 +1,6 @@
+<form class="form-inline my-2 my-lg-0">
+  <input type=text name='searchTerm' [(ngModel)]="searchTerm" (input)="getSuggestions()" />
+  <ul>
+    <li *ngFor="let suggestion of suggestions" (click)="selectSuggestion(suggestion)">{{ suggestion }}</li>
+  </ul>
+</form>
